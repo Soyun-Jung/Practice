@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function(함수)</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        
+        fieldset{
+            margin-left : 40%;
+            margin-right : 40%;
+            width : 200px;
+        }
+
+        h1{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>계산기 만들기</legend>
+        <!-- 첫번째 숫자 : <input type = "text" id="n1"><br>
+        두번째 숫자 : <input type = "text" id="n2"><br><br> -->
+
+        <!-- <p>첫번째 숫자 : <span id="n1"></span></p>
+        <p>두번째 숫자 : <span id="n2"></span></p> -->
+        <span id="present"></span><span id="pro"></span>
+        <br><br>
+
+        <input type="button" value="+" onclick="sum()">
+        <input type="button" value="-" onclick="minus()">
+        <input type="button" value="×" onclick="multi()">
+        <input type="button" value="÷" onclick="divide()">
+        <br><br>
+        <input type="button" value="1" onclick=get_1()>
+        <input type="button" value="2" onclick=2>
+        <input type="button" value="3" onclick=3><Br>
+        <input type="button" value="4" onclick=4>
+        <input type="button" value="5" onclick=5>
+        <input type="button" value="6" onclick=6><br>
+        <input type="button" value="7" onclick=7>
+        <input type="button" value="8" onclick=8>
+        <input type="button" value="9" onclick=9>
+        <br><br>
+        <input type="button" value="=" onclick="result()">
+        
+        <h1>&nbsp&nbsp결과 : <span id="ans"></span></h1>
+    </fieldset>
+    
+</body>
+
+<script>
+    //자바 : method
+    //자바 스크립트 : function()
+
+    //전역변수 a, b 선언
+    var a;
+    var b;
+
+    //입력문자 숫자로 바꿔주기
+    function get_1(){
+        document.getElementById("present").innerHTML = 1
+    }
+
+    function insert(){
+        
+        a=parseInt(document.getElementById("n1").value);
+        b=parseInt(document.getElementById("n2").value);       
+    }
+
+    //더하기
+    function sum(){
+        // insert();
+        // document.getElementById("ans").innerHTML = (a+b);
+        document.getElementById("pro").innerHTML = "+";
+    }
+
+    //빼기
+    function minus(){
+        insert();
+        var result = (a-b); //result값으로 받아서 넘겨주는게 더 나음.
+        document.getElementById("ans").innerHTML = result;
+    }
+
+    //곱하기
+    function multi(){
+        insert();
+        var result = (a*b);
+        document.getElementById("ans").innerHTML = result;
+    }
+
+    //나누기
+    function divide(){
+        insert();        
+        var result = (a/b);
+        if(b==0){
+            document.getElementById("ans").innerHTML = "다시 입력해주세요."
+        }else{
+        document.getElementById("ans").innerHTML = result;
+        }
+
+    }    
+
+</script>
+
+</html>

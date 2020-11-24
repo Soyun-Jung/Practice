@@ -1,0 +1,14 @@
+ul,ol{
+    color:blueviolet
+}
+
+ul>li{
+    color : tomato;
+}
+
+.ol1 li{
+    color:pink;
+}
+#ol2 li{
+    color : plum;
+}

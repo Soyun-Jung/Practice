@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Array(배열)</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //배열선언방법1
+    var arrNum=[];
+    console.log(typeof arrNum);
+
+    //배열선언방법2
+    var arrString=new Array();
+
+    arrNum = [1,2,3,4];
+    arrString=["A","B","C","D"];
+    
+    console.log(arrNum);
+    console.log(arrString);
+
+    //push를 통해 배열값 추가하기(맨 마지막에)
+    arrNum.push(5);
+    arrString.push("E");
+
+    console.log(arrNum);
+    console.log(arrString);
+
+    //length를 이용한 배열 크기
+    console.log(arrNum.length);
+    
+    //isArray를 사용한 배열 확인 여부
+    console.log("arrNum은 배열인가?"+Array.isArray(arrNum));
+
+    var arrInt=4;
+    console.log("arrInt는 배열인가?"+Array.isArray(arrInt));
+
+</script>
+</html>

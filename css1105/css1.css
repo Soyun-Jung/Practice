@@ -1,0 +1,17 @@
+
+
+input{
+    background-color: whitesmoke;
+}
+
+input:focus{
+    background-color:lightgray;
+}
+input:hover{
+    background-color:black;
+    color:white;
+}
+
+.btn{
+    text-align:center;      
+}

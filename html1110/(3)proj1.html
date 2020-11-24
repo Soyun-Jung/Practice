@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>BANK</title>
+    <link href="css1.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <fieldset>
+        <legend>내 계좌</legend>
+        <h3>금액 입력 : <input type="text" id="int1" placeholder="금액을 입력하세요"></h3>
+        <input type="button" value="입금" onclick="Account.deposit()">
+        <input type="button" value="출금" onclick="Account.withdraw()">
+        <input type="button" value="잔액조회" onclick="Account.toString()">
+        <h3 id="balance1"></h3>
+
+
+    </fieldset>
+
+</body>
+
+<script>
+    //Object 생성
+    var Account = {};
+    var input = document.getElementById("int1");
+    var money = 0;
+
+    //필드
+    Account.balance = 0;
+
+    //메서드 생성
+    Account.deposit = function () {
+        var dif = input.value;
+
+        if (dif == "") {
+            alert("금액을 입력해주세요!");
+            this.balance += 0;
+        }
+
+        else {
+            money = parseInt(input.value);
+            this.balance += money;
+            money = 0;
+            document.getElementById("balance1").innerHTML = " ";
+            console.log("잔액 : " + this.balance + "원");
+        }
+    }
+
+    Account.withdraw = function () {
+        var dif = input.value;
+
+        if (dif == "") {
+            alert("금액을 입력해주세요!");
+            this.balance -= 0;
+        }
+        else {
+            money = parseInt(input.value);
+            if (money > this.balance) {    //출금금액이 잔액보다 클 경우
+                console.log("잔액 부족");
+                alert("잔액이 부족합니다.")
+                money = 0;
+                document.getElementById("balance1").innerHTML = " ";
+            } else {
+                this.balance -= money;
+                money = 0;
+                document.getElementById("balance1").innerHTML = " ";
+                console.log("잔액 : " + this.balance + "원");
+            }
+        }
+    }
+   
+    Account.toString = function () {
+        document.getElementById("balance1").innerHTML = "balance : " + this.balance + "원";
+    }
+
+</script>
+
+</html>

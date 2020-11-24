@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE DETAILS</title>
+    <style>
+        table{
+            margin : 20px 20% 0px 20%;
+            text-align: center;
+            border:black solid;
+            width:60%;
+            height: 60%;
+            border-collapse: collapse;
+        }
+        td,tr{
+            border:gray solid;
+            width:200px;
+            height:50px;
+        }
+
+        th{
+            border:black solid;
+            width:200px;
+            height:50px;
+            font-size:x-large
+        }
+        #caption
+        {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>「현재 상영중인 영화정보」</h1> -->
+    <table>
+        <caption id="caption">「현재 상영중인 영화정보」</caption>
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="4">영화정보</th>
+        </tr>
+        <tr>
+            <th>영화 제목</th>
+            <th>세부 정보</th>
+            <th>등급</th>
+            <th>상영시간</th>
+        </tr>
+        <tr>
+            <td rowspan="3"><img src="./aldkffkels.jpg" height="150px"></td>
+            <td rowspan="3">알라딘</td>
+            <td>모험,가족,판타지</td>
+            <td rowspan="3">전체 관람가</td>
+            <td rowspan="3">128분</td>
+        </tr>
+        <tr>
+            <td>미국</td>
+        </tr>
+        <tr>
+            <td>2019.05.23 개봉</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3"><img src="./rltodcnd.jpg" height="150px"></td>
+            <td rowspan="3">기생충</td>
+            <td>드라마</td>
+            <td rowspan="3">15세 관람가</td>
+            <td rowspan="3">131분</td>
+        </tr>
+        <tr>
+            <td>한국</td>
+        </tr>
+        <tr>
+            <td>2019.05.30 개봉</td>
+        </tr>
+
+        <tr>
+            <td>출처</td>
+            <td colspan="4"><a href="https://movie.naver.com/">네이버 영화정보</a></td>
+        </tr>
+
+    </table>
+</body>
+</html>

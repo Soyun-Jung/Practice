@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>배열 추가 삭제</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="arrPush()">push</button>
+    <button onclick="arrPop()">pop</button>
+    <button onclick="arrUnshift()">unshift</button>
+    <button onclick="arrShift()">shift</button>
+    <button onclick="arrSplice()">splice</button>
+</body>
+
+<script>
+    var arrNum=[];
+    var i=0;
+
+    for(i=0;i<5;i++){
+        arrNum[i]=i+1;
+    }
+
+    //배열의 뒤에 값을 추가
+    function arrPush(){
+        arrNum.push(i+1);
+        i++;
+        console.log(arrNum);
+    }
+
+    //맨뒤의 배열값 삭제
+    function arrPop(){
+        arrNum.pop();
+        console.log(arrNum);
+    }
+
+    //배열의 앞에 값을 추가
+    function arrUnshift(){
+        arrNum.unshift(i+1);
+        i++;
+        console.log(arrNum);
+    }
+
+    //shift함수를 이용해서 배열 맨앞의 값을 삭제
+    function arrShift(){
+        arrNum.shift();
+        console.log(arrNum);
+    }
+
+    //특정 값 삭제
+    function arrSplice(){
+        var txt1=document.getElementById("txt").value;
+        var txt2=parseInt(txt1);
+        var index = arrNum.indexOf(txt2);   //배열에 주어진 값이 없으면 '-1'이 된다.
+
+        if(index>-1){
+            arrNum.splice(index,1); //index번째의 값을 첫번째까지만 지워줘라
+            console.log(arrNum);
+        }
+        else {
+            alert("입력한 값이 없습니다.");
+        }
+    }
+
+</script>
+
+</html>

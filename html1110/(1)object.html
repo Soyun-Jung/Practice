@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체(Object)</title>
+</head>
+<body>
+    <h2>person Object</h2>
+    <h3 id="person1"></h3>
+    
+    <h2>car Object</h2>
+    <h3 id="car1"></h3>
+
+</body>
+
+<script>
+    //object 선언 방법
+    // var object1 = {};
+    // var object2 = new Object();
+
+    var person = {
+                   name : "정소윤",
+                   phone : "010-3423-4843",
+                   addr : "인천광역시 남동구 구월동"
+                 };
+    
+    var car= new Object();
+
+    car["name"] = "QM6";                //car[0]="QM6";
+    car["company"] = "르노삼성";        //car[1]="르노삼성";
+    car["type"] = "Diesel";             //car[2]="Diesel";
+    car["color"] = "white";             //car[3]="white";
+                
+    
+
+    console.log(person);
+    console.log(car);
+    document.getElementById("person1").innerHTML = "["+person.name+", "+person.phone+", "+person.addr+"]";
+    for(var i in car){
+        document.write(i+" : " + car[i] + "<br>");
+    }
+
+    var text = "";
+    for(var i in car){
+        text += i+" : "+car[i]+"<br>";
+    }
+
+    document.getElementById("car1").innerHTML = text;
+
+</script>
+</html>

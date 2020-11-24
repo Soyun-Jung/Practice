@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div position</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+        .first{
+            background-color: lightsteelblue;
+            position: static;
+            /* 스크롤으로 내려가도 항상 그자리 ('맨 위로' 같은 기능을 가진 아이콘에 사용하면 좋음) */
+        }
+        .second{
+            background-color: peachpuff;
+            left : 100px;
+            top : 50px;
+            position : fixed;
+            z-index: 5;
+        }
+        .third{
+            background-color: thistle;
+            left : 30px;
+            top : -30px;
+            position : relative;
+            z-index: 4;
+        }
+        .fourth{
+            background-color:darkseagreen;
+            position : relative;
+            overflow:scroll;
+            z-index:6;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        첫번째 영역(가로200x세로200)
+    </div>
+
+    <div class="second">
+        두번째 영역(가로200x세로200)
+    </div>
+
+    <div class="third">
+        세번째 영역(가로200x세로200)
+    </div>
+
+    <div class="fourth">
+        누가 먼저 할 것 없이 우린 짐작했지
+        나도 모르는 사이 마음의 정리를 했으니까
+        오래도 됐잖아
+
+        예의상 문자 따위로 끝낼 수도 없으니
+        얼굴 마주한 채 이별을 고하려 했지만
+        I couldn't say good bye
+
+        수년 뒤에 네 맘속 
+        따뜻함으로 남고 싶지만 
+        좋은 이별 따윈 세상에 없어 
+        난 나쁜 놈이 되어야 해
+
+        걸음아 걸음아 살려 
+        뒤돌아보지도 않아
+        비겁하게 도망가도
+        너만은 날 잊지 말아
+        Remember
+        영원히 Remember me
+
+        걸음아 걸음아 살려
+        시간을 거꾸로 달려
+        사라지고 싶지 않아
+        그대여 날 잊지 말아
+        Remember
+        영원히 Remember me
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

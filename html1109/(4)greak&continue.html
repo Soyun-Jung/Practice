@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>BREAK</h2>
+    <p id="break1"></p>
+    <br>
+
+    <h2>CONTINUE</h2>
+    <p id="continue1"></p>
+</body>
+<script>
+    var text1="";
+    var text2="";
+    for(var i=1; i<=10; i++){
+        if(i==6){
+            break;
+        }
+        text1 += "The number is " + i + "<br>";
+    }
+    console.log(text1);
+    document.getElementById("break1").innerHTML=text1;
+
+    for(var i=1; i<=10; i++){
+        if(i%3==0){
+            continue; //건너뛰기
+        }
+        text2 += "The number is " + i + "<br>";
+    }
+    console.log(text2);
+    document.getElementById("continue1").innerHTML=text2;
+</script>
+</html>

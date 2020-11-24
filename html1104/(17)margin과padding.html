@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin과 Padding</title>
+    <style>
+        body{
+            margin : 0px;
+            padding : 0px;
+        }
+
+        p{
+            margin:0px;
+            padding:0px;
+            background-color:lightblue;
+            border : 3px solid blue;
+        }
+        #first{
+            margin : 10px;
+            padding : 0px;
+            background-color: orange;
+            border : 3px solid red;
+        }
+        #second{
+            margin : 10px;
+            padding : 20px;
+            background-color:darkseagreen;
+            border : 3px solid green;
+        }
+        #third{
+            margin : 10px 20px 30px 40px;
+            padding : 10px;
+            background-color:lightpink;
+            border : 3px solid purple;
+        }
+        #fourth{
+            margin : 10px;
+            padding : 10px 20px 30px 40px;
+            background-color:papayawhip;
+            border : 3px solid brown;
+        }
+        #fifth{
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            margin : 10px;
+            background-color:papayawhip;
+            border : 3px solid brown;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>margin은 요소와 요소 간의 간격<br/>
+    바깥 여백을 주는 속성</h2>
+
+    <h2>padding은 요소 안, 내부 여백을 주는 속성</h2>
+
+    <p> margin : 0px, padding : 0px 단락</p>
+    <p id="first"> margin : 10px, padding : 0px 단락</p>
+    <p id="second"> margin : 10px, padding : 20px 단락</p>
+    <br/> <hr/><br/>
+    <p id="third">margin : 10px,20px,30px,40px  padding : 10px 단락</p>
+    <p id="fourth">margin : 10px  padding : 10px,20px,30px,40px 단락</p>
+    <p id="fifth">margin : 10px  padding : 10px,20px,30px,40px 단락</p>
+</body>
+
+</html>

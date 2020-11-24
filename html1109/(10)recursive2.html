@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀호출(2의n승)</title>
+</head>
+<body>
+    <fieldset>
+        <legend>2의 n승</legend>
+        <input type="text" id="pot" placeholder="0 이상의 숫자를 입력하세요">
+        <input type="button" value="enter"" onclick="potmethod()">
+        <h2>입력한 값 : <span id="insert"></span></h2>
+        <h2>결과 값 : <span id="result"></span></h2>
+
+    </fieldset>
+</body>
+
+<script>
+    function powerOfTwo(num){
+        if(num==0){
+            return 1;
+        }
+        return 2*powerOfTwo(num-1);
+
+    }
+    function potmethod(){
+        //1. 입력값 가져오기
+        var num = parseInt(document.getElementById("pot").value);
+
+        //2. 계산된 값 출력하기
+        document.getElementById("insert").innerHTML = num;
+        document.getElementById("result").innerHTML = powerOfTwo(num);
+    }
+</script>
+</html>

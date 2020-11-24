@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="localfocus1()">
+
+</body>
+<script>
+    var global =100;
+    //전역변수 : 어디서나 사용 가능
+
+    function localfocus1(){
+        var local = 200;
+        //지역 변수 : 함수 내에서만 사용 가능
+
+        console.log("global : " + global);
+        console.log("local : " + local );
+        localfocus2();
+    }
+    console.log("global : " + global);
+
+    function localfocus2(){
+        console.log("global : " + global);
+        console.log("local : " + local );
+    }
+
+</script>
+</html>

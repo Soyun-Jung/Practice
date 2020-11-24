@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>do-while문</h2>
+    <p id="dowhile1"></p>
+    <h2 id="while1"></h2>
+</body>
+
+<script>
+    /*
+    <do-while문>
+
+        초기식;
+        do{
+            실행문;
+            증감식;
+        }while(조건식);
+    */
+
+    //초기식
+    var i=1;
+    var j=1;
+    var text1="";
+    var text2="";
+
+    do{
+        text1 += "The number is " + i + "<br>"; //실행문
+        i++; //증감식
+    }while(i<1); //조건식
+
+    document.getElementById("dowhile1").innerHTML=text1;
+    
+    while(j<1){
+        text2 += "The number is " + j + "<br>";
+        j++;
+        document.getElementById("while1").innerHTML=text2;
+    }
+
+</script>
+</html>

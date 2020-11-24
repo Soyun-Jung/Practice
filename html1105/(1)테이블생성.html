@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블생성</title>
+    <style>
+        table,tr,td,th{
+            border:cadetblue 1px solid; /*solid를 해도 collapse를 하기 전엔 두줄로 나옴 */
+            text-align: center;
+            border-collapse: collapse; 
+            /* collapse : 테이블 선을 합쳐준다 */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- tr태그(행. row) -->
+        <!-- td태그(열. column) -->
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+        </tr>
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <!-- th태그(제목셀) -->
+            <th>1행1열</th>
+            <td>1행2열</td>
+        </tr>
+        <tr>
+            <th>2행1열</th>
+            <td>2행2열</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>연락처</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>김기동</td>
+            <td>30</td>
+            <td>010-4859-8451</td>
+            <td>인천광역시 미추홀구</td>
+        </tr>        
+        <tr>
+            <td>김종일</td>
+            <td>22</td>
+            <td>010-1578-8915</td>
+            <td>인천광역시 부평구</td>
+        </tr>
+        <tr>
+            <td>유지선</td>
+            <td>20</td>
+            <td>010-8458-4812</td>
+            <td>인천광역시 미추홀구</td>
+        </tr>
+        <tr>
+            <td>정소윤</td>
+            <td>24</td>
+            <td>010-9495-9361</td>
+            <td>인천광역시 남동구</td>
+        </tr>
+
+    </table>
+</body>
+</html>

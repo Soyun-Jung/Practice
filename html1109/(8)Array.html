@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array(배열)</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>성적계산</legend>
+        점수입력 : <input type="text" id="int1"><br><br>
+        <input type="button" value="입력" onclick="input()">
+        <input type="button" value="출력" onclick="output()">
+        <input type="button" value="총점" onclick="sum()">
+        <input type="button" value="초기화" onclick="reset()">
+        <h3>총점은 <span id="total">0</span>점입니다.</h3>
+
+    </fieldset>
+</body>
+
+<script>
+    //배열선언
+    var array = [];
+    var index = 0;
+
+    function input(){
+        var input1 = document.getElementById("int1");
+
+        array[index]=parseInt(input1.value);
+        input1.value="";
+        input1.focus();
+        index++;
+    }
+    
+    function output(){
+    //    for(var i=0; i<array.length; i++){
+    //        console.log("array["+i+"] = " +array[i]);
+    //    }
+
+       for(var i in array){ //i를 array의 크기만큼 반복문을 돌린다.
+        console.log("array["+i+"] = " +array[i]);
+       }
+       console.log("배열의 크기 : " + array.length);
+
+    }
+    function sum(){
+        var result=0;
+        for(var i in array){
+            result += array[i];
+        }
+    document.getElementById("total").innerHTML = result;
+    }
+    function reset(){
+        index=0;
+        array = [];
+    }
+</script>
+</html>

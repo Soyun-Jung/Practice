@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>행병합(rowspan)</title>
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border:lightblue 2px solid;
+            /*solid를 해도 collapse를 하기 전엔 두줄로 나옴 */
+            text-align: center;
+            border-collapse: collapse;
+            /* collapse : 테이블 선을 합쳐준다 */
+        }
+        td{
+            width:100px;
+            height:30px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>행병합</caption>
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+            <td>1행4열</td>
+        </tr>
+
+        <tr>
+            <td>2행1열</td>
+            <td rowspan="3">2행2열</td>
+            <td rowspan="2" colspan="2">2행3열</td>
+            <!-- <td rowspan="2">2행4열</td> -->
+        </tr>
+
+        <tr>
+            <td>3행1열</td>
+            <!-- <td>3행2열</td> -->
+            <!-- <td>3행3열</td> -->
+            <!-- <td>3행4열</td> -->
+        </tr>
+
+        <tr>
+            <td>4행1열</td>
+            <!-- <td>4행2열</td> -->
+            <td>4행3열</td>
+            <td>4행4열</td>
+        </tr>
+    </table>
+</body>
+
+</html>

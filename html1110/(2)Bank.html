@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //Object 생성
+    var Account={};
+
+    //필드
+    Account.balance = 0;
+    
+    //메서드 생성
+    Account.deposit = function(amount){
+        this.balance += amount;
+    }
+
+    Account.withdraw = function(amount){
+        if(amount>this.balance){    //출금금액이 잔액보다 클 경우
+            console.log("잔액이 부족합니다.");
+        }else{
+            this.balance -= amount;
+        }
+    }
+
+    Account.toString=function(){
+        return "balance : " + this.balance + "원";
+    }
+
+    //Object 사용
+    Account.balance = 50000;
+
+    //10000원 입금
+    Account.deposit(10000);
+
+    console.log(Account.toString());
+
+    //80000원 출금
+    Account.withdraw(80000);
+
+    //30000원 출금
+    Account.withdraw(30000);
+
+    console.log(Account.toString());
+
+
+</script>
+</html>

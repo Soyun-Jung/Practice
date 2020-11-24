@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>테이블구조</title>
+
+    <style>
+        table,tr,td,th{
+            border:cadetblue 1px solid; /*solid를 해도 collapse를 하기 전엔 두줄로 나옴 */
+            text-align: center;
+            border-collapse: collapse; 
+            /* collapse : 테이블 선을 합쳐준다 */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>테이블제목</caption>
+        <!-- head - body - foot 순서대로 출력됨 -->
+        <tfoot>
+            <tr>
+                <td>3행1열</td>
+                <td>3행2열</td>
+                <td>3행3열</td>
+            </tr>
+        </tfoot>
+
+        <thead>
+            <tr>
+                <td>1행1열</td>
+                <td>1행2열</td>
+                <td>1행3열</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>2행1열</td>
+                <td>2행2열</td>
+                <td>2행3열</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+
+</html>
