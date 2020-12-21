@@ -1,0 +1,22 @@
+$.ajax({
+	type : GET이나 POST방식 (http method)
+	url : 이동하고자 하는 주소
+	data : 주소로 보내고자 하는 데이터 / 파라미터
+	dataType : 받아올 데이터의 타입
+		   ex) "text", "json", "html", "xml"등
+
+	success : function(result){ },	// 성공시
+	error : function() {}		// 실패시
+      });
+
+JSON이란?
+ - JavaScript Object Notation의 약자
+ - Json구조
+  { "key" : "value" }
+
+ex) {
+	"이름" : "황인철",
+	"나이" : 35,
+	"가족" : {}
+    }
+
